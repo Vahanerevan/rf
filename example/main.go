@@ -5,10 +5,17 @@ import (
 	`time`
 )
 
+func main() {
+	rf.Exchange()
+	
+}
+
+)
+
 var ex = rf.NewExchange(rf.Topic("main"), rf.MaxLife(time.Second*3))
 
 func main() {
-	
+
 	runBg()
 	runSub(4)
 	// runSub(8)
@@ -26,7 +33,7 @@ func runTestSub() {
 			time.Sleep(time.Second * 2)
 			fmt.Println(ex.HasSubscribers())
 		}
-		
+
 	}()
 }
 
@@ -54,7 +61,7 @@ func runSub(subId int) {
 			return
 		}
 	}()
-	
+
 }
 
 func runBg() {
