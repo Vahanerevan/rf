@@ -1,4 +1,4 @@
-package main
+package rf
 
 import (
 	`errors`
