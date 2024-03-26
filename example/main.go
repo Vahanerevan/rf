@@ -10,7 +10,7 @@ func main() {
 	
 }
 
-)
+
 
 var ex = rf.NewExchange(rf.Topic("main"), rf.MaxLife(time.Second*3))
 
